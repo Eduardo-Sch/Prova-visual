@@ -1,0 +1,58 @@
+### Listar os funcionários
+GET https://localhost:5001/api/funcionario/listar
+
+
+### Listar as folhas
+GET https://localhost:5001/api/folhas/listar
+
+### Cadastrar um funcionário
+POST https://localhost:5001/api/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Diogo",
+    "cpf" : "12345678911",
+    "email" : "asd@asd.com",
+    "salario" : 1000,
+    "nascimento" : "1900-09-20"
+}
+
+### Cadastrar folha
+POST https://localhost:5001/api/folhas/cadastrar
+Content-Type: application/json
+
+{
+    "funcionarioid" : 28,
+    "valorhora" : 50,
+    "quantidadehoras" : 100,
+    "anocompetencia" : 2022,
+    "mescompetencia" : 10
+}
+
+
+
+### Buscar um funcionário pelo CPF
+GET https://localhost:5001/api/funcionario/buscar/12312312313
+
+### Deletar um funcionário pelo Id
+DELETE https://localhost:5001/api/funcionario/deletar/7
+
+
+### buscar folha pelo cpf/mes/ano
+GET https://localhost:5001/api/folhas/buscar/12345678912/10/2022
+
+### buscar folhas pelo mes/ano
+GET https://localhost:5001/api/folhas/buscar1/10/2022
+
+### Deletar Folha pelo Id
+DELETE https://localhost:5001/api/folhas/deletar/8
+
+### Alterar um funcionário
+PATCH  https://localhost:5001/api/funcionario/alterar
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "nome" : "Diogo Steinke Deconto Modificado Teste",
+    "cpf" : "123456789"
+}
